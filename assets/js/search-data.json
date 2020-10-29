@@ -2,11 +2,11 @@
   
     
         "post0": {
-            "title": "My Test Post - MD",
-            "content": "A Test Post 001 . test with markdown .",
-            "url": "https://caili.github.io/notes/markdown/2020/10/13/test-001.html",
-            "relUrl": "/markdown/2020/10/13/test-001.html",
-            "date": " • Oct 13, 2020"
+            "title": "Stochastic Gradient Descent (SGD)",
+            "content": "%matplotlib inline from fastai.basics import * . n = 100 x = torch.ones(n, 2) x[:,0].uniform_(-1.,1) a = tensor(3., 2); a y = x @ a + torch.rand(n) a = tensor(-1.,1) y_hat = x @ a plt.scatter(x[:,0], y) plt.scatter(x[:,0], y_hat); . &lt;!DOCTYPE svg PUBLIC &quot;-//W3C//DTD SVG 1.1//EN&quot; &quot;http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd&quot;&gt; 2020-10-15T12:40:32.809145 image/svg+xml Matplotlib v3.3.1, https://matplotlib.org/ lr = 1e-1 def mse(y, y_hat): return ((y_hat - y) **2 ).mean() def update(): y_hat = x @ a loss = mse(y, y_hat) # if t % 10 == 0: print(loss) loss.backward() with torch.no_grad(): a.sub_(lr * a.grad) a.grad.zero_() a = nn.Parameter(tensor(-1.,1)); a for t in range(100): update() plt.scatter(x[:,0], y) plt.scatter(x[:,0], x @ a.detach()); . &lt;!DOCTYPE svg PUBLIC &quot;-//W3C//DTD SVG 1.1//EN&quot; &quot;http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd&quot;&gt; 2020-10-15T12:40:33.354208 image/svg+xml Matplotlib v3.3.1, https://matplotlib.org/ from matplotlib import animation, rc rc(&#39;animation&#39;, html=&#39;jshtml&#39;) a = nn.Parameter(tensor(-1.,1)); a fig = plt.figure() plt.scatter(x[:,0], y, c=&#39;orange&#39;) line, = plt.plot(x[:,0], x @ a.detach()) plt.close() def animate(i): update() line.set_ydata(x @ a.detach()) return line, animation.FuncAnimation(fig, animate, np.arange(0, 100), interval=20) . &lt;/input&gt; Once Loop Reflect",
+            "url": "https://caili.github.io/notes/jupyter/2020/10/15/sgd.html",
+            "relUrl": "/jupyter/2020/10/15/sgd.html",
+            "date": " • Oct 15, 2020"
         }
         
     
